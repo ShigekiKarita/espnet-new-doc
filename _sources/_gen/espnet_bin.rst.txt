@@ -1,0 +1,85 @@
+- :ref:`asr_enhance.py`: Enhance noisy speech for speech recognition
+- :ref:`asr_recog.py`: Transcribe text from speech using a speech recognition model on one CPU or GPU
+- :ref:`asr_train.py`: Train an automatic speech recognition (ASR) model on one CPU, one or multiple GPUs
+- :ref:`lm_train.py`: Train a new language model on one CPU or one GPU
+- :ref:`tts_decode.py`: Synthesize speech from text using a TTS model on one CPU
+- :ref:`tts_train.py`: Train a new text-to-speech (TTS) model on one CPU, one or multiple GPUs
+
+
+
+.. _asr_enhance.py:
+
+asr_enhance.py
+~~~~~~~~~~~~~~
+
+.. argparse::
+   :module: espnet.bin.asr_enhance
+   :func: get_parser
+   :prog: asr_enhance.py
+
+
+
+
+.. _asr_recog.py:
+
+asr_recog.py
+~~~~~~~~~~~~
+
+.. argparse::
+   :module: espnet.bin.asr_recog
+   :func: get_parser
+   :prog: asr_recog.py
+
+
+
+
+.. _asr_train.py:
+
+asr_train.py
+~~~~~~~~~~~~
+
+.. argparse::
+   :module: espnet.bin.asr_train
+   :func: get_parser
+   :prog: asr_train.py
+
+
+
+
+.. _lm_train.py:
+
+lm_train.py
+~~~~~~~~~~~
+
+.. argparse::
+   :module: espnet.bin.lm_train
+   :func: get_parser
+   :prog: lm_train.py
+
+
+
+
+.. _tts_decode.py:
+
+tts_decode.py
+~~~~~~~~~~~~~
+
+.. argparse::
+   :module: espnet.bin.tts_decode
+   :func: get_parser
+   :prog: tts_decode.py
+
+
+
+
+.. _tts_train.py:
+
+tts_train.py
+~~~~~~~~~~~~
+
+.. argparse::
+   :module: espnet.bin.tts_train
+   :func: get_parser
+   :prog: tts_train.py
+
+

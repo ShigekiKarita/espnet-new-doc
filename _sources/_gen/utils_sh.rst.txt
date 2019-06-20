@@ -1,0 +1,195 @@
+.. _convert_fbank.sh:
+
+convert_fbank.sh
+~~~~~~~~~~~~~~~~
+
+.. code-block:: none
+
+    Usage: convert_fbank.sh [options] <data-dir> [<log-dir> [<fbank-dir>] ]
+    e.g.: convert_fbank.sh data/train exp/griffin_lim/train wav
+    Note: <log-dir> defaults to <data-dir>/log, and <fbank-dir> defaults to <data-dir>/data
+    Options:
+      --nj <nj>                                        # number of parallel jobs
+      --cmd (utils/run.pl|utils/queue.pl <queue opts>) # how to run jobs.
+.. _data2json.sh:
+
+data2json.sh
+~~~~~~~~~~~~
+
+.. code-block:: none
+
+    Usage: data2json.sh <data-dir> <dict>
+    e.g. data2json.sh data/train data/lang_1char/train_units.txt
+    Options:
+      --nj <nj>                                        # number of parallel jobs
+      --cmd (utils/run.pl|utils/queue.pl <queue opts>) # how to run jobs.
+      --feat <feat-scp>                                # feat.scp
+      --oov <oov-word>                                 # Default: <unk>
+      --out <outputfile>                               # If omitted, write in stdout
+      --filetype <mat|hdf5|sound.hdf5>                 # Specify the format of feats file
+      --preprocess-conf <json>                         # Apply preprocess to feats when creating shape.scp
+      --verbose <num>                                  # Default: 0
+.. _download_from_google_drive.sh:
+
+download_from_google_drive.sh
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. code-block:: none
+
+    Usage: download_from_google_drive.sh <share-url> [<download_dir> <file_ext>]
+    e.g.: download_from_google_drive.sh https://drive.google.com/open?id=1zF88bRNbJhw9hNBq3NrDg8vnGGibREmg downloads .zip
+    Options:
+        <download_dir>: directory to save downloaded file. (Default=downloads)
+        <file_ext>: file extension of the file to be downloaded. (Default=zip)
+.. _dump_pcm.sh:
+
+dump_pcm.sh
+~~~~~~~~~~~
+
+.. code-block:: none
+
+    Usage: dump_pcm.sh [options] <data-dir> [<log-dir> [<pcm-dir>] ]
+    e.g.: dump_pcm.sh data/train exp/dump_pcm/train pcm
+    Note: <log-dir> defaults to <data-dir>/log, and <pcm-dir> defaults to <data-dir>/data
+    Options:
+      --nj <nj>                                        # number of parallel jobs
+      --cmd (utils/run.pl|utils/queue.pl <queue opts>) # how to run jobs.
+      --write-utt2num-frames <true|false>     # If true, write utt2num_frames file.
+      --filetype <mat|hdf5|sound.hdf5>                 # Specify the format of feats file
+.. _dump.sh:
+
+dump.sh
+~~~~~~~
+
+.. code-block:: none
+
+    Usage: dump.sh <scp> <cmvnark> <logdir> <dumpdir>
+.. _eval_source_separation.sh:
+
+eval_source_separation.sh
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. code-block:: none
+
+    Usage: eval_source_separation.sh reffiles enffiles <dir>
+        e.g. eval_source_separation.sh reference.scp enhanced.scp outdir
+    
+    And also supporting multiple sources:
+        e.g. eval_source_separation.sh "ref1.scp,ref2.scp" "enh1.scp,enh2.scp" outdir
+    
+    Options:
+      --nj <nj>                                        # number of parallel jobs
+      --cmd (utils/run.pl|utils/queue.pl <queue opts>) # how to run jobs.
+.. _feat_to_shape.sh:
+
+feat_to_shape.sh
+~~~~~~~~~~~~~~~~
+
+.. code-block:: none
+
+    Usage: feat_to_shape.sh [options] <input-scp> <output-scp> [<log-dir>]
+    e.g.: feat_to_shape.sh data/train/feats.scp data/train/shape.scp data/train/log
+    Options:
+      --nj <nj>                                        # number of parallel jobs
+      --cmd (utils/run.pl|utils/queue.pl <queue opts>) # how to run jobs.
+      --filetype <mat|hdf5|sound.hdf5>                 # Specify the format of feats file
+      --preprocess-conf <json>                         # Apply preprocess to feats when creating shape.scp
+      --verbose <num>                                  # Default: 0
+.. _get_sys_info.sh:
+
+get_sys_info.sh
+~~~~~~~~~~~~~~~
+
+.. code-block:: none
+
+    Usage: get_sys_info.sh
+.. _make_fbank.sh:
+
+make_fbank.sh
+~~~~~~~~~~~~~
+
+.. code-block:: none
+
+    Usage: make_fbank.sh [options] <data-dir> [<log-dir> [<fbank-dir>] ]
+    e.g.: make_fbank.sh data/train exp/make_fbank/train mfcc
+    Note: <log-dir> defaults to <data-dir>/log, and <fbank-dir> defaults to <data-dir>/data
+    Options:
+      --nj <nj>                                        # number of parallel jobs
+      --cmd (utils/run.pl|utils/queue.pl <queue opts>) # how to run jobs.
+      --filetype <mat|hdf5|sound.hdf5>                 # Specify the format of feats file
+.. _make_stft.sh:
+
+make_stft.sh
+~~~~~~~~~~~~
+
+.. code-block:: none
+
+    Usage: make_stft.sh [options] <data-dir> [<log-dir> [<stft-dir>] ]
+    e.g.: make_stft.sh data/train exp/make_stft/train stft
+    Note: <log-dir> defaults to <data-dir>/log, and <stft-dir> defaults to <data-dir>/data
+    Options:
+      --nj <nj>                                        # number of parallel jobs
+      --cmd (utils/run.pl|utils/queue.pl <queue opts>) # how to run jobs.
+      --filetype <mat|hdf5|sound.hdf5>                 # Specify the format of feats file
+.. _pack_model.sh:
+
+pack_model.sh
+~~~~~~~~~~~~~
+
+.. code-block:: none
+
+    Usage: pack_model.sh <tr_conf> <dec_conf> <cmvn> <e2e>, for example:
+    <tr_conf>:  conf/train.yaml
+    <dec_conf>: conf/decode.yaml
+    <cmvn>:     data/tr_it/cmvn.ark
+    <e2e>:      exp/tr_it_pytorch_train/results/model.last10.avg.best
+.. _recog_wav.sh:
+
+recog_wav.sh
+~~~~~~~~~~~~
+
+.. code-block:: none
+
+    Usage:
+        recog_wav.sh <wav>
+    
+    Example:
+        rec -c 1 -r 16000 example.wav trim 0 5
+        recog_wav.sh example.wav
+.. _reduce_data_dir.sh:
+
+reduce_data_dir.sh
+~~~~~~~~~~~~~~~~~~
+
+.. code-block:: none
+
+    usage: reduce_data_dir.sh srcdir turnlist destdir
+.. _remove_longshortdata.sh:
+
+remove_longshortdata.sh
+~~~~~~~~~~~~~~~~~~~~~~~
+
+.. code-block:: none
+
+    usage: remove_longshortdata.sh olddatadir newdatadir
+.. _score_sclite.sh:
+
+score_sclite.sh
+~~~~~~~~~~~~~~~
+
+.. code-block:: none
+
+    Usage: score_sclite.sh <data-dir> <dict>
+.. _synth_wav.sh:
+
+synth_wav.sh
+~~~~~~~~~~~~
+
+.. code-block:: none
+
+    Usage:
+        synth_wav.sh <text>
+    
+    Example:
+        echo "This is a demonstration of text to speech." > example.txt
+        synth_wav.sh example.txt

@@ -1,0 +1,421 @@
+- :ref:`addjson.py`: add multiple json values to an input or output value
+- :ref:`apply-cmvn.py`: apply mean-variance normalization to files
+- :ref:`average_checkpoints.py`: average models from snapshot
+- :ref:`change_yaml.py`: change specified attributes of a YAML file
+- :ref:`compute-cmvn-stats.py`: Compute cepstral mean and variance normalization statisticsIf wspecifier provided: per-utterance by default, or per-speaker ifspk2utt option provided; if wxfilename: global
+- :ref:`compute-fbank-feats.py`: compute FBANK feature from WAV
+- :ref:`compute-stft-feats.py`: compute STFT feature from WAV
+- :ref:`concatjson.py`: concatenate json files
+- :ref:`convert_fbank_to_wav.py`: convert FBANK to WAV using Griffin-Lim algorithm
+- :ref:`copy-feats.py`: copy feature with preprocessing
+- :ref:`dump-pcm.py`: dump PCM files from a WAV scp file
+- :ref:`eval_perm_free_error.py`: evaluate permutation-free error
+- :ref:`eval-source-separation.py`: Evaluate enhanced speech. e.g. ../doc/argparse2rst.py --ref ref.scp --enh enh.scp --outdir outputdiror ../doc/argparse2rst.py --ref ref.scp ref2.scp --enh enh.scp enh2.scp --outdir outputdir
+- :ref:`feat-to-shape.py`: convert feature to its shape
+- :ref:`filt.py`: filter words in a text file
+- :ref:`get_yaml.py`: get a specified attribute from a YAML file
+- :ref:`json2sctm.py`: convert json to sctm
+- :ref:`json2text.py`: convert ASR recognized json to text
+- :ref:`json2trn_mt.py`: convert json to machine translation transcription
+- :ref:`json2trn.py`: convert a json to a transcription file with a token dictionary
+- :ref:`mergejson.py`: merge json files
+- :ref:`merge_scp2json.py`: Given each file paths with such format as <key>:<file>:<type>. type> can be omitted and the default is "str". e.g. ../doc/argparse2rst.py --input-scps feat:data/feats.scp shape:data/utt2feat_shape:shape --input-scps feat:data/feats2.scp shape:data/utt2feat2_shape:shape --output-scps text:data/text shape:data/utt2text_shape:shape --scps utt2spk:data/utt2spk
+- :ref:`mix-mono-wav-scp.py`: Mixing wav.scp files into a multi-channel wav.scp using sox.
+- :ref:`result2json.py`: convert sclite's result.txt file to json
+- :ref:`scp2json.py`: convert scp to json
+- :ref:`splitjson.py`: split a json file for parallel processing
+- :ref:`text2token.py`: convert raw text to tokenized text
+- :ref:`text2vocabulary.py`: create a vocabulary file from text files
+- :ref:`trn2ctm.py`: convert trn to ctm
+- :ref:`trn2stm.py`: convert trn to stm
+
+
+
+.. _addjson.py:
+
+addjson.py
+~~~~~~~~~~
+
+.. argparse::
+   :module: addjson
+   :func: get_parser
+   :prog: addjson.py
+
+
+
+
+.. _apply-cmvn.py:
+
+apply-cmvn.py
+~~~~~~~~~~~~~
+
+.. argparse::
+   :module: apply-cmvn
+   :func: get_parser
+   :prog: apply-cmvn.py
+
+
+
+
+.. _average_checkpoints.py:
+
+average_checkpoints.py
+~~~~~~~~~~~~~~~~~~~~~~
+
+.. argparse::
+   :module: average_checkpoints
+   :func: get_parser
+   :prog: average_checkpoints.py
+
+
+
+
+.. _change_yaml.py:
+
+change_yaml.py
+~~~~~~~~~~~~~~
+
+.. argparse::
+   :module: change_yaml
+   :func: get_parser
+   :prog: change_yaml.py
+
+
+
+
+.. _compute-cmvn-stats.py:
+
+compute-cmvn-stats.py
+~~~~~~~~~~~~~~~~~~~~~
+
+.. argparse::
+   :module: compute-cmvn-stats
+   :func: get_parser
+   :prog: compute-cmvn-stats.py
+
+
+
+
+.. _compute-fbank-feats.py:
+
+compute-fbank-feats.py
+~~~~~~~~~~~~~~~~~~~~~~
+
+.. argparse::
+   :module: compute-fbank-feats
+   :func: get_parser
+   :prog: compute-fbank-feats.py
+
+
+
+
+.. _compute-stft-feats.py:
+
+compute-stft-feats.py
+~~~~~~~~~~~~~~~~~~~~~
+
+.. argparse::
+   :module: compute-stft-feats
+   :func: get_parser
+   :prog: compute-stft-feats.py
+
+
+
+
+.. _concatjson.py:
+
+concatjson.py
+~~~~~~~~~~~~~
+
+.. argparse::
+   :module: concatjson
+   :func: get_parser
+   :prog: concatjson.py
+
+
+
+
+.. _convert_fbank_to_wav.py:
+
+convert_fbank_to_wav.py
+~~~~~~~~~~~~~~~~~~~~~~~
+
+.. argparse::
+   :module: convert_fbank_to_wav
+   :func: get_parser
+   :prog: convert_fbank_to_wav.py
+
+
+
+
+.. _copy-feats.py:
+
+copy-feats.py
+~~~~~~~~~~~~~
+
+.. argparse::
+   :module: copy-feats
+   :func: get_parser
+   :prog: copy-feats.py
+
+
+
+
+.. _dump-pcm.py:
+
+dump-pcm.py
+~~~~~~~~~~~
+
+.. argparse::
+   :module: dump-pcm
+   :func: get_parser
+   :prog: dump-pcm.py
+
+
+
+
+.. _eval_perm_free_error.py:
+
+eval_perm_free_error.py
+~~~~~~~~~~~~~~~~~~~~~~~
+
+.. argparse::
+   :module: eval_perm_free_error
+   :func: get_parser
+   :prog: eval_perm_free_error.py
+
+
+
+
+.. _eval-source-separation.py:
+
+eval-source-separation.py
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. argparse::
+   :module: eval-source-separation
+   :func: get_parser
+   :prog: eval-source-separation.py
+
+
+
+
+.. _feat-to-shape.py:
+
+feat-to-shape.py
+~~~~~~~~~~~~~~~~
+
+.. argparse::
+   :module: feat-to-shape
+   :func: get_parser
+   :prog: feat-to-shape.py
+
+
+
+
+.. _filt.py:
+
+filt.py
+~~~~~~~
+
+.. argparse::
+   :module: filt
+   :func: get_parser
+   :prog: filt.py
+
+
+
+
+.. _get_yaml.py:
+
+get_yaml.py
+~~~~~~~~~~~
+
+.. argparse::
+   :module: get_yaml
+   :func: get_parser
+   :prog: get_yaml.py
+
+
+
+
+.. _json2sctm.py:
+
+json2sctm.py
+~~~~~~~~~~~~
+
+.. argparse::
+   :module: json2sctm
+   :func: get_parser
+   :prog: json2sctm.py
+
+
+
+
+.. _json2text.py:
+
+json2text.py
+~~~~~~~~~~~~
+
+.. argparse::
+   :module: json2text
+   :func: get_parser
+   :prog: json2text.py
+
+
+
+
+.. _json2trn_mt.py:
+
+json2trn_mt.py
+~~~~~~~~~~~~~~
+
+.. argparse::
+   :module: json2trn_mt
+   :func: get_parser
+   :prog: json2trn_mt.py
+
+
+
+
+.. _json2trn.py:
+
+json2trn.py
+~~~~~~~~~~~
+
+.. argparse::
+   :module: json2trn
+   :func: get_parser
+   :prog: json2trn.py
+
+
+
+
+.. _mergejson.py:
+
+mergejson.py
+~~~~~~~~~~~~
+
+.. argparse::
+   :module: mergejson
+   :func: get_parser
+   :prog: mergejson.py
+
+
+
+
+.. _merge_scp2json.py:
+
+merge_scp2json.py
+~~~~~~~~~~~~~~~~~
+
+.. argparse::
+   :module: merge_scp2json
+   :func: get_parser
+   :prog: merge_scp2json.py
+
+
+
+
+.. _mix-mono-wav-scp.py:
+
+mix-mono-wav-scp.py
+~~~~~~~~~~~~~~~~~~~
+
+.. argparse::
+   :module: mix-mono-wav-scp
+   :func: get_parser
+   :prog: mix-mono-wav-scp.py
+
+
+
+
+.. _result2json.py:
+
+result2json.py
+~~~~~~~~~~~~~~
+
+.. argparse::
+   :module: result2json
+   :func: get_parser
+   :prog: result2json.py
+
+
+
+
+.. _scp2json.py:
+
+scp2json.py
+~~~~~~~~~~~
+
+.. argparse::
+   :module: scp2json
+   :func: get_parser
+   :prog: scp2json.py
+
+
+
+
+.. _splitjson.py:
+
+splitjson.py
+~~~~~~~~~~~~
+
+.. argparse::
+   :module: splitjson
+   :func: get_parser
+   :prog: splitjson.py
+
+
+
+
+.. _text2token.py:
+
+text2token.py
+~~~~~~~~~~~~~
+
+.. argparse::
+   :module: text2token
+   :func: get_parser
+   :prog: text2token.py
+
+
+
+
+.. _text2vocabulary.py:
+
+text2vocabulary.py
+~~~~~~~~~~~~~~~~~~
+
+.. argparse::
+   :module: text2vocabulary
+   :func: get_parser
+   :prog: text2vocabulary.py
+
+
+
+
+.. _trn2ctm.py:
+
+trn2ctm.py
+~~~~~~~~~~
+
+.. argparse::
+   :module: trn2ctm
+   :func: get_parser
+   :prog: trn2ctm.py
+
+
+
+
+.. _trn2stm.py:
+
+trn2stm.py
+~~~~~~~~~~
+
+.. argparse::
+   :module: trn2stm
+   :func: get_parser
+   :prog: trn2stm.py
+
+
